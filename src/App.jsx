@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar"
 import { useMemo, useState } from "react"
 import getTheme from "./theme"
 import Sidebar from "./components/Sidebar"
+import StatCard from "./components/StatCard"
+import DashboardCards from "./components/DashboardCards"
+
 
 function App() {
 
@@ -20,22 +23,27 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-       <CssBaseline />
+      <CssBaseline />
 
       <Box sx={{ minHeight: "100vh", bgcolor: "background.default" }}>
-        <Navbar 
+        <Navbar
           onMenuClick={handleMenuClick}
           mode={mode}
           onToggleMode={toggleMode}
         />
 
-        <Box sx={{ flex: 1, py:3}}>
-           <Sidebar />
-           <Container maxWidth="lg">
-             <Typography variant="h5" sx={{ mb: 2 }}>
+        <Box sx={{ display: "flex" }}>
+          <Sidebar />
+
+          <Box sx={{ flex: 1, py: 3 }}>
+            <Container maxWidth="lg">
+              <Typography variant="h5" sx={{ mb: 2 }}>
                 Overview
-             </Typography>
-           </Container>
+              </Typography>
+
+              <DashboardCards />
+            </Container>
+          </Box>
         </Box>
       </Box>
     </ThemeProvider>
