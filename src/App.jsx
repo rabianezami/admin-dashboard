@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar"
 import { useMemo, useState } from "react"
 import getTheme from "./theme"
 import Sidebar from "./components/Sidebar"
-import StatCard from "./components/StatCard"
 import DashboardCards from "./components/DashboardCards"
+import UserTable from "./components/UserTable"
 
 
 function App() {
@@ -42,6 +42,7 @@ function App() {
               </Typography>
 
               <DashboardCards />
+              <UserTable />
             </Container>
           </Box>
         </Box>
