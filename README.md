@@ -14,7 +14,7 @@ This project was created as a practice dashboard to improve my MUI skills.
 
 ## How to run 
 ```bash
-git clone <your-repo-link>
+git clone <repo-link>
 npm install
 npm run dev
 ```
