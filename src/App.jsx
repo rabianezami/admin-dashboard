@@ -1,8 +1,9 @@
 import { ThemeProvider } from "@emotion/react"
-import { Box, CssBaseline } from "@mui/material"
+import { Box, Container, CssBaseline, Typography } from "@mui/material"
 import Navbar from "./components/Navbar"
 import { useMemo, useState } from "react"
 import getTheme from "./theme"
+import Sidebar from "./components/Sidebar"
 
 function App() {
 
@@ -27,6 +28,15 @@ function App() {
           mode={mode}
           onToggleMode={toggleMode}
         />
+
+        <Box sx={{ flex: 1, py:3}}>
+           <Sidebar />
+           <Container maxWidth="lg">
+             <Typography variant="h5" sx={{ mb: 2 }}>
+                Overview
+             </Typography>
+           </Container>
+        </Box>
       </Box>
     </ThemeProvider>
   )
